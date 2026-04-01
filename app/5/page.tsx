@@ -9,13 +9,13 @@ import {
   CheckCircle,
   Clock,
   FileText,
-  GraduationCap,
   Plus,
   QrCode,
   Search,
   Settings,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -86,10 +86,16 @@ export default function Portal5() {
       <header className="border-b bg-card">
         <div className="mx-auto max-w-6xl flex h-14 items-center justify-between px-6">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <GraduationCap className="h-4 w-4 text-primary-foreground" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-white overflow-hidden">
+              <Image
+                src="/ius-logo.png"
+                alt="IUS Logo"
+                width={32}
+                height={32}
+                className="h-full w-full object-contain"
+              />
             </div>
-            <span className="font-semibold">Track</span>
+            <span className="font-semibold">IUS Track</span>
           </div>
 
           <div className="flex items-center gap-3">

@@ -9,13 +9,13 @@ import {
   ChevronRight,
   Clock,
   Filter,
-  GraduationCap,
   Menu,
   Plus,
   Search,
   TrendingUp,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -181,13 +181,21 @@ export default function Portal1() {
           </Button>
 
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
-              <GraduationCap className="h-6 w-6 text-primary-foreground" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white overflow-hidden">
+              <Image
+                src="/ius-logo.png"
+                alt="IUS Logo"
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-semibold tracking-tight">UniTrack</h1>
+              <h1 className="text-xl font-semibold tracking-tight">
+                IUS Attendance
+              </h1>
               <p className="text-xs text-muted-foreground">
-                Academic Attendance System
+                International University of Sarajevo
               </p>
             </div>
           </div>

@@ -8,7 +8,6 @@ import {
   CheckCircle,
   ChevronDown,
   Clock,
-  GraduationCap,
   LayoutGrid,
   List,
   MoreHorizontal,
@@ -17,6 +16,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -153,10 +153,16 @@ export default function Portal2() {
       <header className="border-b bg-card">
         <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <GraduationCap className="h-5 w-5 text-primary-foreground" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white overflow-hidden">
+              <Image
+                src="/ius-logo.png"
+                alt="IUS Logo"
+                width={36}
+                height={36}
+                className="h-full w-full object-contain"
+              />
             </div>
-            <span className="text-lg font-semibold">Academic Portal</span>
+            <span className="text-lg font-semibold">IUS Portal</span>
           </div>
 
           <div className="flex items-center gap-4">

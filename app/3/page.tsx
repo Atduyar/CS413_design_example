@@ -9,12 +9,12 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  GraduationCap,
   MapPin,
   Search,
   Users,
   XCircle,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -117,8 +117,14 @@ export default function Portal3() {
       <header className="border-b">
         <div className="flex h-14 items-center gap-4 px-6">
           <div className="flex items-center gap-2">
-            <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-semibold">Campus Schedule</span>
+            <Image
+              src="/ius-logo.png"
+              alt="IUS Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain"
+            />
+            <span className="font-semibold">IUS Schedule</span>
           </div>
 
           <div className="ml-auto flex items-center gap-3">
